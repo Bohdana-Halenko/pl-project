@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plinko demo juego online</title>
+    <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-oHDEc8XedBb0zW3BfOwP3R9oH6WHTKROq6axUy6kKkZxMZ5ICdA+YkC1ZaScQpY+U+dFEv4lZkzT8zcVZbqagA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-wrap">
+        <a href="../index.html">
+          <img src="../img/logo.webp" alt="logo Plinko" class="header-logo" />
+        </a>
+
+        <nav class="header-nav">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+          </label>
+
+          <ul class="header-list">
+            <li class="header-item">
+              <a class="header-link" href="../pages/app.html">App</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="../pages/demo.html">Demo</a>
+            </li>
+            <li class="header-item">
+              <a
+                class="header-link"
+                target="_blank"
+                href="https://1wfzws.life/?p=ayxs&sub1=1"
+                >Plinko 1Win</a
+              >
+            </li>
+          </ul>
+
+          <a
+            class="header-btn"
+            target="_blank"
+            href="https://1wfzws.life/?p=ayxs&sub1=1"
+            >Juega Ahora</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="demo">
+        <div class="container">
+          <h1 class="title">Prueba la versión demo de Plinko</h1>
+          <div class="demo-box">
+            <a href="#" class="demo-link" id="open-demo">Jugar demo</a>
+            <div class="modal" id="demoModal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe
+                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+            <a
+              href="https://1wfzws.life/?p=ayxs&sub1=1"
+              class="demo-app-link"
+              target="_blank"
+              >Jugar casino</a
+            >
+          </div>
+          <p class="text">
+            La versión demo de Plinko es sin duda una gran oportunidad para
+            probar el juego y familiarizarse con sus configuraciones y
+            mecánicas. Sin embargo, los jugadores experimentados la usan con
+            fines ligeramente diferentes.
+          </p>
+          <p class="text">
+            Por ejemplo, los jugadores suelen acceder al modo gratuito de Plinko
+            para probar una estrategia específica, eliminando cualquier riesgo.
+            Además, la configuración de la tragamonedas en el modo demo es la
+            misma que la de jugar con dinero real, por lo que, tras unas cuantas
+            docenas de giros, es fácil comprender el rendimiento real de la
+            máquina. Prueba la demo de Plinko ahora y evalúa todas las
+            características del juego sin ningún riesgo.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <h4 class="footer-text">
+            Todos los derechos reservados. Este sitio es únicamente informativo
+            y no ofrece servicios de juego ni apuestas por dinero real. El
+            contenido está destinado a mayores de 18 años. Juega con
+            responsabilidad.
+          </h4>
+        </div>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a href="../pages/politica-de-privacidad.html" class="footer-link"
+              >Política de Privacidad</a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="../pages/acerca-de-nosotros.html" class="footer-link"
+              >Acerca de Nosotros</a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="../pages/terminos-y-condiciones.html" class="footer-link"
+              >Términos y Condiciones</a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="../pages/juego-responsable.html" class="footer-link"
+              >Juego Responsable</a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="../pages/sitemap.html" class="footer-link">Sitemap</a>
+          </li>
+          <li class="footer-item">
+            <a href="../pages/politica-de-cookies.html" class="footer-link"
+              >Política de Cookies</a
+            >
+          </li>
+        </ul>
+        <div class="footer-wrap">
+          <p>&copy; 2025 Plinko game</p>
+          <a href="../index.html">
+            <img src="../img/logo.webp" alt="logo Plinko" class="footer-logo" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const openBtn = document.getElementById("open-demo");
+        const modal = document.getElementById("demoModal");
+        const closeBtn = modal.querySelector(".close");
+
+        const iframeSrc =
+          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
+        const iframe = modal.querySelector("iframe");
+
+        openBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          iframe.src = iframeSrc;
+          modal.style.display = "flex";
+        });
+
+        function closeModal() {
+          modal.style.display = "none";
+          iframe.src = "";
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+
+        window.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      });
+    </script> 
+  </body>
+</html>

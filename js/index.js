@@ -88,7 +88,7 @@ function setCookie(name, value, days) {
   const date = new Date();
   date.setTime(date.getTime() + (days*24*60*60*1000));
   const expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/;domain=pl-project-five.vercel.app;SameSite=Lax";
+  document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
 }
 
 function getCookie(name) {
@@ -103,7 +103,7 @@ function getCookie(name) {
 }
 
 function eraseCookie(name) {
-  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;domain=pl-project-five.vercel.app;SameSite=Lax";
+  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax";
 }
 
 window.addEventListener("load", function() {

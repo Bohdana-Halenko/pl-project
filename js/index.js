@@ -130,46 +130,47 @@ setInterval(nextReview, 2500);
 
 // для Vercel
 function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + (days*24*60*60*1000));
-  const expires = "expires=" + date.toUTCString();
+  const d = new Date();
+  d.setTime(d.getTime() + (days*24*60*60*1000));
+  const expires = "expires=" + d.toUTCString();
   document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax;Secure";
 }
 
 function getCookie(name) {
-  const nameEQ = name + "=";
-  const cookies = document.cookie.split(';');
-  for (let c of cookies) {
-    c = c.trim();
-    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+  const cname = name + "=";
+  const decoded = decodeURIComponent(document.cookie);
+  const ca = decoded.split(';');
+  for(let i=0; i < ca.length; i++) {
+    let c = ca[i].trim();
+    if (c.indexOf(cname) === 0) return c.substring(cname.length);
   }
   return null;
 }
 
-function setConsent(value) {
-  localStorage.setItem("cookiesChoice", value);
-  setCookie("cookiesChoice", value, 365);
+function checkConsent() {
+  return getCookie('cookiesChoice') || localStorage.getItem('cookiesChoice');
 }
 
-function getConsent() {
-  return localStorage.getItem("cookiesChoice") || getCookie("cookiesChoice");
+function saveConsent(value) {
+  setCookie('cookiesChoice', value, 365);
+  localStorage.setItem('cookiesChoice', value);
 }
 
-window.addEventListener("DOMContentLoaded", function() {
-  const banner = document.getElementById("cookie-banner");
-  const choice = getConsent();
+window.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const consent = checkConsent();
 
-  if (!choice) {
-    banner.style.display = "block";
+  if (!consent) {
+    banner.style.display = 'block';
   }
 
-  document.getElementById("accept-cookies").addEventListener("click", function() {
-    setConsent("accepted");
-    banner.style.display = "none";
+  document.getElementById('accept-cookies').addEventListener('click', () => {
+    saveConsent('accepted');
+    banner.style.display = 'none';
   });
 
-  document.getElementById("decline-cookies").addEventListener("click", function() {
-    setConsent("declined");
-    banner.style.display = "none";
+  document.getElementById('decline-cookies').addEventListener('click', () => {
+    saveConsent('declined');
+    banner.style.display = 'none';
   });
 });

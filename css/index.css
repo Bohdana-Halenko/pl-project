@@ -1280,6 +1280,9 @@ body {
     display: flex;
     gap: 50px;
   }
+  .where-aspect{
+    gap: 50px;
+  }
   .where-aspect-img {
     display: block;
     width: 500px;

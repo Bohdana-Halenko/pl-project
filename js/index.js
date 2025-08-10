@@ -84,30 +84,75 @@ setInterval(nextReview, 2500);
 
 
 // Cookies
-function setCookie(name, value, days) {
+// function setCookie(name, value, days) {
+//   const date = new Date();
+//   date.setTime(date.getTime() + (days*24*60*60*1000));
+//   const expires = "expires=" + date.toUTCString();
+//   document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+// }
+
+// function getCookie(name) {
+//   const decodedCookie = decodeURIComponent(document.cookie);
+//   const cookies = decodedCookie.split(';');
+//   const nameEQ = name + "=";
+//   for (let c of cookies) {
+//     while (c.charAt(0) === ' ') c = c.substring(1);
+//     if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+//   }
+//   return null;
+// }
+
+// function eraseCookie(name) {
+//   document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax";
+// }
+
+// window.addEventListener("load", function() {
+//   const choice = getCookie("cookiesChoice");
+//   const banner = document.getElementById("cookie-banner");
+
+//   if (!choice) {
+//     banner.style.display = "block";
+//   }
+
+//   document.getElementById("accept-cookies").addEventListener("click", function() {
+//     setCookie("cookiesChoice", "accepted", 365);
+//     banner.style.display = "none";
+//   });
+
+//   document.getElementById("decline-cookies").addEventListener("click", function() {
+//     setCookie("cookiesChoice", "declined", 365);
+//     eraseCookie("cookiesAccepted");
+//     banner.style.display = "none";
+//   });
+// });
+
+
+
+// для Vercel
+function setConsent(value) {
   const date = new Date();
-  date.setTime(date.getTime() + (days*24*60*60*1000));
+  date.setTime(date.getTime() + (365*24*60*60*1000));
   const expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+  document.cookie = "cookiesChoice=" + value + ";" + expires + ";path=/;SameSite=Lax;Secure";
+
+  localStorage.setItem("cookiesChoice", value);
 }
 
-function getCookie(name) {
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const cookies = decodedCookie.split(';');
-  const nameEQ = name + "=";
-  for (let c of cookies) {
+function getConsent() {
+  const local = localStorage.getItem("cookiesChoice");
+  if (local) return local;
+
+  const nameEQ = "cookiesChoice=";
+  const ca = document.cookie.split(';');
+  for (let c of ca) {
     while (c.charAt(0) === ' ') c = c.substring(1);
     if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
   }
   return null;
 }
 
-function eraseCookie(name) {
-  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax";
-}
-
 window.addEventListener("load", function() {
-  const choice = getCookie("cookiesChoice");
+  const choice = getConsent();
   const banner = document.getElementById("cookie-banner");
 
   if (!choice) {
@@ -115,13 +160,12 @@ window.addEventListener("load", function() {
   }
 
   document.getElementById("accept-cookies").addEventListener("click", function() {
-    setCookie("cookiesChoice", "accepted", 365);
+    setConsent("accepted");
     banner.style.display = "none";
   });
 
   document.getElementById("decline-cookies").addEventListener("click", function() {
-    setCookie("cookiesChoice", "declined", 365);
-    eraseCookie("cookiesAccepted");
+    setConsent("declined");
     banner.style.display = "none";
   });
 });

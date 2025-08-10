@@ -129,31 +129,35 @@ setInterval(nextReview, 2500);
 
 
 // для Vercel
-function setConsent(value) {
+function setCookie(name, value, days) {
   const date = new Date();
-  date.setTime(date.getTime() + (365*24*60*60*1000));
+  date.setTime(date.getTime() + (days*24*60*60*1000));
   const expires = "expires=" + date.toUTCString();
-  document.cookie = "cookiesChoice=" + value + ";" + expires + ";path=/;SameSite=Lax;Secure";
-
-  localStorage.setItem("cookiesChoice", value);
+  document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax;Secure";
 }
 
-function getConsent() {
-  const local = localStorage.getItem("cookiesChoice");
-  if (local) return local;
-
-  const nameEQ = "cookiesChoice=";
-  const ca = document.cookie.split(';');
-  for (let c of ca) {
-    while (c.charAt(0) === ' ') c = c.substring(1);
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const cookies = document.cookie.split(';');
+  for (let c of cookies) {
+    c = c.trim();
     if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
   }
   return null;
 }
 
-window.addEventListener("load", function() {
-  const choice = getConsent();
+function setConsent(value) {
+  localStorage.setItem("cookiesChoice", value);
+  setCookie("cookiesChoice", value, 365);
+}
+
+function getConsent() {
+  return localStorage.getItem("cookiesChoice") || getCookie("cookiesChoice");
+}
+
+window.addEventListener("DOMContentLoaded", function() {
   const banner = document.getElementById("cookie-banner");
+  const choice = getConsent();
 
   if (!choice) {
     banner.style.display = "block";

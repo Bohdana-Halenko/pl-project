@@ -22,6 +22,8 @@
   --footer-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
   --app-link: #f4ad14;
   --app-link-hover: #dc9c12;
+  --agree-btn: #4CAF50;
+  --disagree-btn: #d9534f;
 }
 
 /* all */
@@ -959,6 +961,46 @@ body {
   margin: 20px auto;
 }
 
+
+
+/* --------------------------------------------------Сookies----------------------------------------------------------- */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--faq-background);
+  color: var(--main-text-color);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
+}
+.cookie-text{
+  margin-bottom: 15px;
+}
+.cookie-banner button {
+  background: var(--agree-btn);
+  color: var(--main-text-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.cookie-banner button:hover {
+  opacity: 0.9;
+}
+.cookie-banner .decline {
+  background: var(--disagree-btn);
+}
+.cookie-banner .decline:hover {
+  opacity: 0.9;
+}
+
+
+
 /* -------------------------------------------------------------------480------------------------------------------------------------ */
 @media screen and (min-width: 480px) {
   body {
@@ -994,6 +1036,13 @@ body {
   .demo-box {
     padding-top: 130px;
     padding-bottom: 130px;
+  }
+  .cookie-banner {
+    font-size: 16px;
+  }
+
+  .cookie-banner button {
+    font-size: 16px;
   }
 }
 
@@ -1393,6 +1442,13 @@ body {
     font-size: 26px;
     margin-top: 50px;
   }
+  .cookie-banner {
+    font-size: 20px;
+  }
+
+  .cookie-banner button {
+    font-size: 20px;
+  }
 }
 
 /* --------------------------------------------------------------Mobile menu -----------------------------------------------*/
@@ -1417,7 +1473,7 @@ label.menu-icon {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 4px;
+    /* top: 4px; */
     right: 16px;
     z-index: 10;
     cursor: pointer;

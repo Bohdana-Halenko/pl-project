@@ -151,14 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
       return null;
   }
 
-  // Показуємо банер тільки якщо кукі немає
   if (!getCookie("cookiesConsent")) {
       banner.style.display = "block";
   }
 
   function handleConsent(value) {
       setCookie("cookiesConsent", value, 365);
-      banner.style.display = "none"; // просто приховуємо
+      banner.style.display = "none";
   }
 
   acceptBtn.addEventListener("click", () => handleConsent("accepted"));

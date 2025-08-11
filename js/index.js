@@ -134,34 +134,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const acceptBtn = document.getElementById("accept-cookies");
   const declineBtn = document.getElementById("decline-cookies");
 
-  // Функція для встановлення cookie
   function setCookie(name, value, days) {
       const date = new Date();
       date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
       document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
   }
 
-  // Функція для отримання cookie
   function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(";").shift();
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+      }
+      return null;
   }
 
-  // Перевірка чи вже є вибір користувача
+  // Показуємо банер тільки якщо кукі немає
   if (!getCookie("cookiesConsent")) {
-      banner.style.display = "block"; // Показуємо банер тільки якщо cookie немає
+      banner.style.display = "block";
   }
 
-  // Натискання "Прийняти"
-  acceptBtn.addEventListener("click", function () {
-      setCookie("cookiesConsent", "accepted", 365);
-      banner.remove();
-  });
+  function handleConsent(value) {
+      setCookie("cookiesConsent", value, 365);
+      banner.style.display = "none"; // просто приховуємо
+  }
 
-  // Натискання "Відхилити"
-  declineBtn.addEventListener("click", function () {
-      setCookie("cookiesConsent", "declined", 365);
-      banner.remove();
-  });
+  acceptBtn.addEventListener("click", () => handleConsent("accepted"));
+  declineBtn.addEventListener("click", () => handleConsent("declined"));
 });

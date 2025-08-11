@@ -129,48 +129,39 @@ setInterval(nextReview, 2500);
 
 
 // для Vercel
-function setCookie(name, value, days) {
-  const d = new Date();
-  d.setTime(d.getTime() + days*24*60*60*1000);
-  const expires = "expires=" + d.toUTCString();
-  document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax;Secure`;
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const declineBtn = document.getElementById("decline-cookies");
 
-function getCookie(name) {
-  const cname = name + "=";
-  const decoded = decodeURIComponent(document.cookie);
-  const cookies = decoded.split(';');
-  for(let c of cookies) {
-    c = c.trim();
-    if(c.indexOf(cname) === 0) return c.substring(cname.length);
-  }
-  return null;
-}
-
-function saveConsent(value) {
-  localStorage.setItem("cookiesChoice", value);
-  setCookie("cookiesChoice", value, 365);
-}
-
-function getConsent() {
-  return localStorage.getItem("cookiesChoice") || getCookie("cookiesChoice");
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  const banner = document.getElementById('cookie-banner');
-  const consent = getConsent();
-
-  if (!consent) {
-    banner.style.display = 'block';
+  // Функція для встановлення cookie
+  function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
   }
 
-  document.getElementById('accept-cookies').addEventListener('click', () => {
-    saveConsent('accepted');
-    banner.remove();
+  // Функція для отримання cookie
+  function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+
+  // Перевірка чи вже є вибір користувача
+  if (!getCookie("cookiesConsent")) {
+      banner.style.display = "block"; // Показуємо банер тільки якщо cookie немає
+  }
+
+  // Натискання "Прийняти"
+  acceptBtn.addEventListener("click", function () {
+      setCookie("cookiesConsent", "accepted", 365);
+      banner.remove();
   });
 
-  document.getElementById('decline-cookies').addEventListener('click', () => {
-    saveConsent('declined');
-    banner.remove();
+  // Натискання "Відхилити"
+  declineBtn.addEventListener("click", function () {
+      setCookie("cookiesConsent", "declined", 365);
+      banner.remove();
   });
 });

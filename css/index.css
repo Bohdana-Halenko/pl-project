@@ -89,7 +89,6 @@ section {
   }
 }
 
-/*  */
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--body-color);
@@ -185,7 +184,6 @@ body {
   background-color: var(--link-hover);
 }
 
-/*------------------------------------------------------- Mobile menu ----------------------------------------------*/
 
 /*--------------------------------------------------------------- Toc------------------------------------------------- */
 .toc {
@@ -419,7 +417,7 @@ body {
     transform: rotate(0deg);
   }
 }
-/* -------------------------------------About---------------------------------- */
+/* -------------------------------------About------------------------------------------- */
 .about-list {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -435,7 +433,7 @@ body {
   line-height: 160%;
 }
 
-/* --------------------------------------------Plan-----------------------------------*/
+/* --------------------------------------------Plan-------------------------------------*/
 
 .plan-text {
   margin-bottom: 20px;
@@ -457,7 +455,7 @@ body {
   margin-right: 15px;
 }
 
-/* ---------------------------------------where------------------------------------ */
+/* ---------------------------------------where------------------------------------------ */
 
 .where-img {
   width: 100%;
@@ -519,7 +517,7 @@ body {
   height: 20px;
 }
 
-/* -------------------------------------------Differens----------------------------- */
+/* -------------------------------------------Differens------------------------------------ */
 .differens-subtitle {
   font-size: 30px;
   margin-bottom: 40px;
@@ -536,7 +534,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ---------------------------------Bonus------------------------------------------ */
+/* ---------------------------------Bonus---------------------------------------------------- */
 .bonus-icon {
   width: 20px;
   height: 20px;
@@ -553,7 +551,7 @@ body {
   margin-top: 40px;
 }
 
-/* ----------------------------------Strategia --------------------------------------*/
+/* ----------------------------------Strategia -----------------------------------------------*/
 .strategia-list {
   display: flex;
   flex-direction: column;
@@ -578,7 +576,7 @@ body {
   margin-top: 20px;
 }
 
-/* -----------------------------------------------Mobile -----------------------------*/
+/* -----------------------------------------------Mobile -------------------------------------------*/
 .mobile-box {
   display: flex;
   flex-direction: column;
@@ -648,7 +646,7 @@ body {
   display: none;
 }
 
-/* ---------------------------------------Security ------------------------------------*/
+/* ---------------------------------------Security -----------------------------------------------*/
 .security-title {
   font-size: 24px;
   margin-bottom: 20px;
@@ -671,7 +669,7 @@ body {
 .security-text {
   line-height: 160%;
 }
-/* ---------------------------------------review------------------------------- */
+/* ---------------------------------------review----------------------------------------------------- */
 .review {
   max-height: 170px;
   display: none;
@@ -723,7 +721,7 @@ body {
   background-color: var(--background-link);
 }
 
-/* --------------------------------------------------------FAQ------------------------------ */
+/* --------------------------------------------------------FAQ------------------------------------------ */
 .faq {
   font-family: Arial, sans-serif;
   color: var(--text-color);
@@ -792,7 +790,7 @@ body {
   padding-top: 20px;
 }
 
-/* ---------------------------------------------------------Footer--------------------------------- */
+/* ---------------------------------------------------------Footer------------------------------------ */
 .footer {
   padding: 30px;
   background-color: var(--footer-background);
@@ -838,6 +836,12 @@ body {
   color: var(--background-link);
 }
 
+/* --------------------------------------------------------------Mobile menu ----------------------------------------*/
+input#menu-toggle,
+label.menu-icon {
+  display: none;
+}
+
 /* ------------------------------------------------------------Modal -------------------------------------------------*/
 .modal {
   display: none;
@@ -880,7 +884,7 @@ body {
   z-index: 10;
 }
 
-/* -----------------------------------------------------------------Demo------------------------------------------ */
+/* -----------------------------------------------------------------Demo---------------------------------------- */
 .demo-box {
   width: 100%;
   background-image: url('../img/bg.webp');
@@ -918,13 +922,13 @@ body {
 .demo-app-link {
   background-color: var(--app-link);
 }
-/* -------------------------------------------------Politica----------------------------------------------------- */
+/* -------------------------------------------------Politica-------------------------------------------------- */
 .politica-title {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-/* --------------------------------------------------Sitemap------------------------------------------------------ */
+/* --------------------------------------------------Sitemap--------------------------------------------------- */
 .list {
   display: flex;
   flex-direction: column;
@@ -943,7 +947,7 @@ body {
   color: var(--background-link);
 }
 
-/* --------------------------------------------Responsable------------------------------------------------ */
+/* --------------------------------------------Responsable---------------------------------------------------- */
 .subtitle {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -963,7 +967,7 @@ body {
 
 
 
-/* --------------------------------------------------Сookies----------------------------------------------------------- */
+/* --------------------------------------------------Сookies------------------------------------------------------ */
 .cookie-banner {
   display: none;
   position: fixed;
@@ -1047,7 +1051,7 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------768--------------------------------------------------------------------- */
+/* --------------------------------------------------------------------768----------------------------------------------------------- */
 @media screen and (min-width: 768px) {
   body {
     font-size: 16px;
@@ -1164,6 +1168,94 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .header-wrap {
+    position: relative;
+  }
+
+  .header-nav {
+    order: 1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  label.menu-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /* top: 4px; */
+    right: 16px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  label.menu-icon span,
+  label.menu-icon span::before,
+  label.menu-icon span::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--header-table);
+    position: absolute;
+    transition: 0.3s;
+  }
+
+  label.menu-icon span {
+    top: 13px;
+  }
+
+  label.menu-icon span::before {
+    top: -8px;
+  }
+
+  label.menu-icon span::after {
+    top: 8px;
+  }
+
+  .header-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: var(--body-color);
+    padding: 20px;
+    z-index: 5;
+  }
+
+  input#menu-toggle:checked ~ label.menu-icon span {
+    transform: rotate(-45deg);
+  }
+
+  input#menu-toggle:checked ~ label.menu-icon span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  input#menu-toggle:checked ~ label.menu-icon span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  input#menu-toggle:checked ~ .header-list {
+    display: flex;
+  }
+
+  .header-item {
+    margin: 15px 0;
+  }
+
+  .header-btn {
+    display: block;
+    margin-right: 50px;
+    width: fit-content;
+  }
+}
+
+/* --------------------------------------------------------------------900----------------------------------------------------------- */
 @media screen and (min-width: 900px) {
   .hero-list {
     flex-direction: row;
@@ -1192,7 +1284,7 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------laptop--------------------------------------------------------------- */
+/* --------------------------------------------------------------------1200---------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
   body {
     font-size: 20px;
@@ -1455,95 +1547,6 @@ body {
   }
 }
 
-/* --------------------------------------------------------------Mobile menu -----------------------------------------------*/
-input#menu-toggle,
-label.menu-icon {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  .header-wrap {
-    position: relative;
-  }
 
-  .header-nav {
-    order: 1;
-    width: 100%;
-    justify-content: flex-end;
-  }
 
-  label.menu-icon {
-    display: block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    /* top: 4px; */
-    right: 16px;
-    z-index: 10;
-    cursor: pointer;
-  }
-
-  label.menu-icon span,
-  label.menu-icon span::before,
-  label.menu-icon span::after {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: var(--header-table);
-    position: absolute;
-    transition: 0.3s;
-  }
-
-  label.menu-icon span {
-    top: 13px;
-  }
-
-  label.menu-icon span::before {
-    top: -8px;
-  }
-
-  label.menu-icon span::after {
-    top: 8px;
-  }
-
-  .header-list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background: var(--body-color);
-    padding: 20px;
-    z-index: 5;
-  }
-
-  input#menu-toggle:checked ~ label.menu-icon span {
-    transform: rotate(-45deg);
-  }
-
-  input#menu-toggle:checked ~ label.menu-icon span::before {
-    top: 0;
-    transform: rotate(0);
-  }
-
-  input#menu-toggle:checked ~ label.menu-icon span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-
-  input#menu-toggle:checked ~ .header-list {
-    display: flex;
-  }
-
-  .header-item {
-    margin: 15px 0;
-  }
-
-  .header-btn {
-    display: block;
-    margin-right: 50px;
-    width: fit-content;
-  }
-}

@@ -234,7 +234,7 @@ body {
 /* -----------------------------------------------------------Hero-секція----------------------------------------------------------- */
 
 .hero-title {
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 30px;
   /* text-shadow: var(--text-shadow); */
   color: var(--background-link);

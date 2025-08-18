@@ -388,7 +388,6 @@ section {
   margin-top: 20px;
 }
 .popular-icon {
-  width: 20px;
   display: inline-block;
   animation: swing 2s infinite ease-in-out;
   transform-origin: bottom center;
@@ -1347,11 +1346,6 @@ label.menu-icon {
     display: block;
     width: 20px;
     height: 20px;
-  }
-
-  /* popular */
-  .popular-icon {
-    width: 20px;
   }
 
   /* about */

@@ -85,37 +85,37 @@ setInterval(nextReview, 2500);
 
 // Cookies
 
-document.addEventListener("DOMContentLoaded", function () {
-  const banner = document.getElementById("cookie-banner");
-  const acceptBtn = document.getElementById("accept-cookies");
-  const declineBtn = document.getElementById("decline-cookies");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const banner = document.getElementById("cookie-banner");
+//   const acceptBtn = document.getElementById("accept-cookies");
+//   const declineBtn = document.getElementById("decline-cookies");
 
-  function setCookie(name, value, days) {
-      const date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
-  }
+//   function setCookie(name, value, days) {
+//       const date = new Date();
+//       date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+//       document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+//   }
 
-  function getCookie(name) {
-      const nameEQ = name + "=";
-      const ca = document.cookie.split(';');
-      for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) === ' ') c = c.substring(1);
-          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-      }
-      return null;
-  }
+//   function getCookie(name) {
+//       const nameEQ = name + "=";
+//       const ca = document.cookie.split(';');
+//       for (let i = 0; i < ca.length; i++) {
+//           let c = ca[i];
+//           while (c.charAt(0) === ' ') c = c.substring(1);
+//           if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+//       }
+//       return null;
+//   }
 
-  if (!getCookie("cookiesConsent")) {
-      banner.style.display = "block";
-  }
+//   if (!getCookie("cookiesConsent")) {
+//       banner.style.display = "block";
+//   }
 
-  function handleConsent(value) {
-      setCookie("cookiesConsent", value, 365);
-      banner.style.display = "none";
-  }
+//   function handleConsent(value) {
+//       setCookie("cookiesConsent", value, 365);
+//       banner.style.display = "none";
+//   }
 
-  acceptBtn.addEventListener("click", () => handleConsent("accepted"));
-  declineBtn.addEventListener("click", () => handleConsent("declined"));
-});
+//   acceptBtn.addEventListener("click", () => handleConsent("accepted"));
+//   declineBtn.addEventListener("click", () => handleConsent("declined"));
+// });

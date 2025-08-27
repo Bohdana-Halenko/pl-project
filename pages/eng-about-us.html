@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plinko demo online game</title>
+    <title>About us</title>
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,40 +55,53 @@
         </nav>
       </div>
     </header>
+
     <main>
-      <section class="demo">
+      <section class="res">
         <div class="container">
-          <h1 class="title">Try the demo version of Plinko</h1>
-          <div class="demo-box">
-            <a href="#" class="demo-link" id="open-demo">Play demo</a>
-            <div class="modal" id="demoModal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe
-                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
-            </div>
-            <a
-              href="https://1wfzws.life/?p=ayxs&sub1=1"
-              class="demo-app-link"
-              target="_blank"
-              >Play casino</a
-            >
-          </div>
-          <p class="text">
-            The Plinko demo is undoubtedly a great opportunity to try out the game and familiarize yourself with its settings and mechanics. However, experienced players use it for slightly different purposes.
-          </p>
-          <p class="text"> 
-            For example, players often use Plinko's free mode to test a specific strategy without taking any risks.
-            Plus, the slot's demo mode settings are the same as those for playing with real money, so after a few dozen spins, it's easy to understand how the machine works without spending a single cent. Try the Plinko demo now and evaluate all the game's
-            features risk-free.
-          </p>
+          <h1 class="title">About US</h1>
+          <p class="text">Our team is passionate about the world of online casinos. We specialize in providing up-to-date and reliable information about the popular game Plinko.</p>
+          <p class="text">Our goal is to help you understand how the game works, how to play for free or for real money, and how to improve your chances, because Plinko is a real-money game. We don't sell bets or operate as a casino. We are a 100% informational website, created by experienced players for beginners.</p>
+          <h2 class="subtitle">What will you find on our site?</h2>
+          <ul class="list">
+            <li class="item">
+              <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+              <p class="res-text">Detailed guides on  
+                <a href="../index.html" class="res-link">how to play Plinko</a>
+              .</p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+              <p class="res-text">
+                Honest reviews of demos and mobile apps, honest feedback from other players
+              </p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+              <p class="res-text">
+                Important information about security, privacy and responsible gaming.
+              </p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+              <p class="res-text">Information about the game on different devices.</p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+              <p class="res-text">
+                Easy game explanations for beginners.
+              </p>
+            </li>
+          </ul>
+          <h2 class="subtitle">Our mission</h2>
+          <p class="text">We want all players to enjoy safe, risk-free gaming. After all, we believe that good information improves the game. Whether you're a beginner or an experienced player, you'll find helpful and easy-to-understand information on our site.</p>
+          <h2 class="subtitle">Transparency and responsibility</h2>
+          <p class="text">All content you read on our website has been prepared through extensive research into game providers, reviews, gameplay, and statistics. We do not promote illegal gambling or post links to unlicensed platforms. We respect your privacy and security.</p>
+          <p class="text">Thank you for visiting us and enjoy your journey in the world <a href="https://1wfzws.life/?p=ayxs&sub1=1" class="res-link">Plinko 1Win</a>!</p>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div>
@@ -136,36 +149,5 @@ The content is intended for those 18 years or older. Play responsibly.
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const openBtn = document.getElementById("open-demo");
-        const modal = document.getElementById("demoModal");
-        const closeBtn = modal.querySelector(".close");
-
-        const iframeSrc =
-          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
-        const iframe = modal.querySelector("iframe");
-
-        openBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          iframe.src = iframeSrc;
-          modal.style.display = "flex";
-        });
-
-        function closeModal() {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      });
-    </script> 
   </body>
 </html>

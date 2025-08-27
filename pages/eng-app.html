@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plinko demo online game</title>
+    <title>App Plinko</title>
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,40 +55,50 @@
         </nav>
       </div>
     </header>
+
     <main>
       <section class="demo">
         <div class="container">
-          <h1 class="title">Try the demo version of Plinko</h1>
-          <div class="demo-box">
-            <a href="#" class="demo-link" id="open-demo">Play demo</a>
-            <div class="modal" id="demoModal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe
-                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
-            </div>
-            <a
+          <h1 class="title">App Plinko</h1>
+          <p class="text">Our app is designed to offer you a smooth, secure, and exciting experience from anywhere. With just a few taps, you can access your favorite games, manage your account, and stay up-to-date with the latest news. With our app, you can win real money!</p>
+          <h2 class="subtitle">Advantages of using our App</h2>
+          <ul class="list">
+            <li class="item">
+              <img src="../img/arrow.webp" alt="plinko casino" class="sitemap-icon" />
+              <p class="res-text">
+                Instant and seamless access.
+              </p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="plinko casino" class="sitemap-icon" />
+              <p class="res-text">
+                Intuitive interface adapted to mobile phones and tablets.
+              </p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="plinko casino" class="sitemap-icon" />
+              <p class="res-text">
+                Real-time notifications about exclusive Plinko promotions and bonuses.
+              </p>
+            </li>
+            <li class="item">
+              <img src="../img/arrow.webp" alt="plinko casino" class="sitemap-icon" />
+              <p class="res-text">Maximum security and protection of personal data.</p>
+            </li>
+          </ul>
+          <img src="../img/plinko.webp" alt="plinko game" class="app-img">
+          <p class="text">There are also some aspects to take into account</p>
+          <p class="text">Although the app is very intuitive and responsive, it's important to have a strong internet connection to avoid interruptions during play. Additionally, some features may be limited depending on your device model or operating system version. If everything works correctly with the internet and your device, you can use the Plinko app. Remember, Plinko is reliable!</p>
+          <a
               href="https://1wfzws.life/?p=ayxs&sub1=1"
-              class="demo-app-link"
+              class="link"
               target="_blank"
-              >Play casino</a
+              >Play now</a
             >
-          </div>
-          <p class="text">
-            The Plinko demo is undoubtedly a great opportunity to try out the game and familiarize yourself with its settings and mechanics. However, experienced players use it for slightly different purposes.
-          </p>
-          <p class="text"> 
-            For example, players often use Plinko's free mode to test a specific strategy without taking any risks.
-            Plus, the slot's demo mode settings are the same as those for playing with real money, so after a few dozen spins, it's easy to understand how the machine works without spending a single cent. Try the Plinko demo now and evaluate all the game's
-            features risk-free.
-          </p>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div>
@@ -137,35 +147,5 @@ The content is intended for those 18 years or older. Play responsibly.
       </div>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const openBtn = document.getElementById("open-demo");
-        const modal = document.getElementById("demoModal");
-        const closeBtn = modal.querySelector(".close");
-
-        const iframeSrc =
-          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
-        const iframe = modal.querySelector("iframe");
-
-        openBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          iframe.src = iframeSrc;
-          modal.style.display = "flex";
-        });
-
-        function closeModal() {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      });
-    </script> 
   </body>
 </html>

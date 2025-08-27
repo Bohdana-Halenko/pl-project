@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plinko demo online game</title>
+    <title>Privacy Policy</title>
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,40 +55,35 @@
         </nav>
       </div>
     </header>
+
     <main>
       <section class="demo">
         <div class="container">
-          <h1 class="title">Try the demo version of Plinko</h1>
-          <div class="demo-box">
-            <a href="#" class="demo-link" id="open-demo">Play demo</a>
-            <div class="modal" id="demoModal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe
-                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
-            </div>
-            <a
-              href="https://1wfzws.life/?p=ayxs&sub1=1"
-              class="demo-app-link"
-              target="_blank"
-              >Play casino</a
-            >
+          <h1 class="title">Privacy Policy</h1>
+          <p class="text">At Plinko, the privacy of every customer is paramount to us. In this policy, we explain what data we collect when you use our website, how we use it, and what measures we take to protect it. The primary goal of the site is to provide accurate and truthful information about the Plinko casino game.</p>
+          <div class="politica-box">
+            <h3 class="politica-title">1. Information we collect</h3>
+            <p class="text">Bank details or phone number. However, during your visit to the website, certain technical data may be automatically collected based on your interaction with the page. This includes your IP address, the type of browser you use, the device from which you access the page, the pages you visit, the time you spend on them, and how you interact with elements such as buttons or links. All of this information is completely anonymous and is used solely for statistical purposes to improve the content, functionality, and performance of the website.</p>
+
+            <h3 class="politica-title">2. Use of cookies</h3>
+            <p class="text">This website uses cookies to personalize your browsing experience, analyze traffic, and tailor content. You can manage or disable cookies in your browser settings. For more information, see our Cookie Policy.</p>
+
+            <h3 class="politica-title">3. Links to external resources</h3>
+            <p class="text">The website may contain links to third-party websites, such as online casinos or affiliate sites. We are not responsible for their privacy policies or their use of your data once you leave our domain. We recommend that you carefully read their privacy policies before providing any personal information and beginning to collaborate with them.</p>
+
+            <h3 class="politica-title">4. Information security</h3>
+            <p class="text">We do not collect sensitive data, but we implement security measures to protect the technical information we collect and prevent unauthorized access.</p>
+
+            <h3 class="politica-title">5. Target audience</h3>
+            <p class="text">This website is intended exclusively for individuals over the age of 18. We do not collect or store information about minors. We do not collaborate with minors.</p>
+
+            <h3 class="politica-title">6. Changes to the privacy policy</h3>
+            <p class="text">We may update this policy at any time to adapt it to changes in legislation or to improve our features. Changes will be displayed on this page along with the update date. All policies are displayed in accordance with the law.</p>
           </div>
-          <p class="text">
-            The Plinko demo is undoubtedly a great opportunity to try out the game and familiarize yourself with its settings and mechanics. However, experienced players use it for slightly different purposes.
-          </p>
-          <p class="text"> 
-            For example, players often use Plinko's free mode to test a specific strategy without taking any risks.
-            Plus, the slot's demo mode settings are the same as those for playing with real money, so after a few dozen spins, it's easy to understand how the machine works without spending a single cent. Try the Plinko demo now and evaluate all the game's
-            features risk-free.
-          </p>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div>
@@ -137,35 +132,5 @@ The content is intended for those 18 years or older. Play responsibly.
       </div>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const openBtn = document.getElementById("open-demo");
-        const modal = document.getElementById("demoModal");
-        const closeBtn = modal.querySelector(".close");
-
-        const iframeSrc =
-          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
-        const iframe = modal.querySelector("iframe");
-
-        openBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          iframe.src = iframeSrc;
-          modal.style.display = "flex";
-        });
-
-        function closeModal() {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      });
-    </script> 
   </body>
 </html>

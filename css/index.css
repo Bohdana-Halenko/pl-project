@@ -68,13 +68,7 @@ section {
   padding-bottom: 20px;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+
 @media screen and (min-width: 768px) {
   section {
     padding-top: 40px;
@@ -89,27 +83,13 @@ section {
   }
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--body-color);
-  color: var(--main-text-color);
-  font-size: 14px;
-  margin: 0;
-  line-height: 160%;
-  font-display: swap;
-}
-/* .preview {
-font-size: 14px;
-} */
+
 .title {
   font-size: 24px;
   margin-bottom: 20px;
   text-shadow: var(--text-shadow);
 }
-.text {
-  margin-bottom: 20px;
-  line-height: 170%;
-}
+
 .link {
   background-color: var(--background-link);
   color: var(--text-color);
@@ -248,12 +228,7 @@ font-size: 14px;
 
 /* -----------------------------------------------------------Hero-секція----------------------------------------------------------- */
 
-.hero-title {
-  font-size: 24px;
-  margin-bottom: 30px;
-  /* text-shadow: var(--text-shadow); */
-  color: var(--background-link);
-}
+
 .hero-list {
   display: flex;
   flex-direction: column;
@@ -1022,12 +997,7 @@ label.menu-icon {
 
 /* -------------------------------------------------------------------480------------------------------------------------------------ */
 @media screen and (min-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-  .preview {
-    font-size: 16px;
-    }
+  
   .toc-toggle {
     font-size: 16px;
     padding: 15px 30px;
@@ -1070,12 +1040,7 @@ label.menu-icon {
 
 /* --------------------------------------------------------------------768----------------------------------------------------------- */
 @media screen and (min-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  .preview {
-    font-size: 16px;
-    }
+ 
   .header-list {
     display: flex;
     gap: 40px;
@@ -1312,12 +1277,7 @@ label.menu-icon {
 
 /* --------------------------------------------------------------------1200---------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
-  body {
-    font-size: 20px;
-  }
-  .preview {
-    font-size: 20px;
-    }
+
   .title {
     font-size: 40px;
     margin-bottom: 30px;
@@ -1335,10 +1295,7 @@ label.menu-icon {
     padding: 20px 60px;
   }
   /* Hero */
-  .hero-title {
-    font-size: 50px;
-    margin-bottom: 30px;
-  } 
+
 
   .hero-item-title {
     font-size: 20px;

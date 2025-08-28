@@ -104,15 +104,8 @@
           margin-bottom: 30px;
           color: var(--background-link);
         }
-        .text.preview {
-          font-size: 12px;
-          font-family: "Roboto", sans-serif;
-        }
-        @media screen and (min-width: 480px) {
-          .text.preview {
-            font-size: 16px;
-          }
-        }
+
+
   
         @media screen and (min-width: 480px) {
         body {
@@ -129,8 +122,5 @@
           .text {
             margin-bottom: 20px;
             line-height: 170%;
-          }
-          .text.preview {
-            font-size: 20px;
           }
         }

@@ -72,8 +72,14 @@ Join now and start winning big!"
             </li>
           </ul>
           <div class="header-lang">
-            <a class="header-lang-link" href="./index.html">ENG</a> /
-            <a class="header-lang-link" href="./pages/es-index.html">ES</a>
+            <select onchange="if(this.value) window.location.href=this.value;">
+              <option value="index.html" selected class="header-lang-link">English</option>
+              <option value="./pages/es-index.html" class="header-lang-link">Spanish</option>
+              <option value="" class="header-lang-link">French</option>
+              <option value="" class="header-lang-link">Portuguese</option>
+          </select>
+            <!-- <a class="header-lang-link" href="./index.html">ENG</a> /
+            <a class="header-lang-link" href="./pages/es-index.html">ES</a> -->
           </div>
           <a
             class="header-btn"
@@ -122,21 +128,16 @@ Join now and start winning big!"
               <a href="#faq" class="toc-link">9. FAQ about the game Plinko</a>
             </li>
           </ol>
-          <h1 class="hero-title">Plinko Mexico - Plinko game online</h1>
-          <p class="text preview">
-            Discover the Plinko game casino with promotions and bonuses. Win
-            real money on Plinko right now! Register and start winning big!
-          </p>
         </div>
       </section>
 
       <section class="hero" id="hero">
         <div class="container">
-            <!-- <img 
-              src="./img/hack.webp" 
-              class="hack lazyload"
-              alt="plinko"
-              loading="lazy"> -->
+          <h1 class="hero-title">Plinko Mexico - Plinko game online</h1>
+          <p class="text preview">
+            Discover the Plinko game casino with promotions and bonuses. Win
+            real money on Plinko right now! Register and start winning big!
+          </p>
          
           <ul class="hero-list">
             <li class="hero-item">

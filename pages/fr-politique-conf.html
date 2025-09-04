@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu en ligne Plinko</title>
+    <title>Politique de confidentialité</title>
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,40 +56,35 @@
         </nav>
       </div>
     </header>
+    
     <main>
-      <section class="demo">
-        <div class="container">
-          <h1 class="title">Essayez la version démo de Plinko</h1>
-          <div class="demo-box">
-            <a href="#" class="demo-link" id="open-demo">Jouer</a>
-            <div class="modal" id="demoModal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe
-                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
+        <section class="demo">
+          <div class="container">
+            <h1 class="title">Politique de confidentialité</h1>
+            <p class="text">Chez Plinko, la confidentialité de chaque client est primordiale pour nous. Dans cette politique, nous expliquons quelles données nous collectons lorsque vous utilisez notre site web, comment nous les utilisons et quelles mesures nous prenons pour les protéger. L'objectif principal du site est de fournir des informations précises et véridiques sur le jeu de casino Plinko.</p>
+            <div class="politica-box">
+              <h3 class="politica-title">1. Informations que nous collectons</h3>
+              <p class="text">Coordonnées bancaires ou numéro de téléphone. Cependant, lors de votre visite sur le site web, certaines données techniques peuvent être collectées automatiquement en fonction de votre interaction avec la page. Il s'agit notamment de votre adresse IP, du type de navigateur que vous utilisez, de l'appareil à partir duquel vous accédez à la page, des pages que vous visitez, du temps que vous passez sur celles-ci et de la manière dont vous interagissez avec des éléments tels que les boutons ou les liens. Toutes ces informations sont totalement anonymes et sont utilisées uniquement à des fins statistiques afin d'améliorer le contenu, la fonctionnalité et les performances du site web.</p>
+  
+              <h3 class="politica-title">2. Utilisation des cookies</h3>
+              <p class="text">Ce site Web utilise des cookies pour personnaliser votre expérience de navigation, analyser le trafic et adapter le contenu. Vous pouvez gérer ou désactiver les cookies dans les paramètres de votre navigateur. Pour plus d'informations, consultez notre politique en matière de cookies.</p>
+  
+              <h3 class="politica-title">3. Liens vers des ressources externes</h3>
+              <p class="text">Le site Web peut contenir des liens vers des sites Web tiers, tels que des casinos en ligne ou des sites affiliés. Nous ne sommes pas responsables de leurs politiques de confidentialité ni de leur utilisation de vos données une fois que vous quittez notre domaine. Nous vous recommandons de lire attentivement leurs politiques de confidentialité avant de fournir des informations personnelles et de commencer à collaborer avec eux.</p>
+  
+              <h3 class="politica-title">4. Sécurité de l'information</h3>
+              <p class="text">Nous ne collectons pas de données sensibles, mais nous mettons en œuvre des mesures de sécurité afin de protéger les informations techniques que nous collectons et d'empêcher tout accès non autorisé.</p>
+  
+              <h3 class="politica-title">5. Public cible</h3>
+              <p class="text">Ce site web est destiné exclusivement aux personnes âgées de plus de 18 ans. Nous ne collectons ni ne conservons d'informations sur les mineurs. Nous ne collaborons pas avec des mineurs.</p>
+  
+              <h3 class="politica-title">6. Modifications apportées à la politique de confidentialité</h3>
+              <p class="text">Nous pouvons mettre à jour cette politique à tout moment afin de l'adapter aux changements législatifs ou d'améliorer nos fonctionnalités. Les modifications seront affichées sur cette page avec la date de mise à jour. Toutes les politiques sont affichées conformément à la loi.</p>
             </div>
-            <a
-              href="https://1wfzws.life/?p=ayxs&sub1=1"
-              class="demo-app-link"
-              target="_blank"
-              >Jouer au casino</a
-            >
           </div>
-          <p class="text">
-            La démo Plinko est sans aucun doute une excellente occasion d'essayer le jeu et de se familiariser avec ses paramètres et ses mécanismes. Cependant, les joueurs expérimentés l'utilisent à des fins légèrement différentes.
-          </p>
-          <p class="text"> 
-            Par exemple, les joueurs utilisent souvent le mode gratuit de Plinko pour tester une stratégie spécifique sans prendre de risques.
-De plus, les paramètres du mode démo de la machine à sous sont les mêmes que ceux utilisés pour jouer avec de l'argent réel. Ainsi, après quelques dizaines de tours, il est facile de comprendre le fonctionnement de la machine sans dépenser un seul centime. Essayez dès maintenant la démo de Plinko et évaluez toutes les fonctionnalités du jeu
-sans aucun risque.
-          </p>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+
     <footer class="footer">
         <div class="container">
           <div>
@@ -139,35 +134,6 @@ sans aucun risque.
         </div>
       </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const openBtn = document.getElementById("open-demo");
-        const modal = document.getElementById("demoModal");
-        const closeBtn = modal.querySelector(".close");
 
-        const iframeSrc =
-          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
-        const iframe = modal.querySelector("iframe");
-
-        openBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          iframe.src = iframeSrc;
-          modal.style.display = "flex";
-        });
-
-        function closeModal() {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      });
-    </script> 
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu en ligne Plinko</title>
+    <title>Conditions d'utilisation</title>
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,40 +56,31 @@
         </nav>
       </div>
     </header>
+    
     <main>
-      <section class="demo">
-        <div class="container">
-          <h1 class="title">Essayez la version démo de Plinko</h1>
-          <div class="demo-box">
-            <a href="#" class="demo-link" id="open-demo">Jouer</a>
-            <div class="modal" id="demoModal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe
-                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
-            </div>
-            <a
-              href="https://1wfzws.life/?p=ayxs&sub1=1"
-              class="demo-app-link"
-              target="_blank"
-              >Jouer au casino</a
-            >
+        <section class="res">
+          <div class="container">
+            <h1 class="title">Conditions d'utilisation</h1>
+            <p class="text">En utilisant ce site Web, vous acceptez toutes les conditions générales détaillées ci-dessous. Veuillez les lire avant d'utiliser nos services.</p>
+            <ul class="list">
+              <li class="item">
+                <p class="text">1. Vous devez utiliser le site web conformément à la législation en vigueur. Il vous est interdit de publier des contenus faux, illégaux ou potentiellement préjudiciables à d'autres utilisateurs.</p>
+              </li>
+              <li class="item">
+                <p class="text">
+                    2. Tout le contenu du site web, y compris les textes et les images, est la propriété intellectuelle de notre site web ou de nos partenaires. L'utilisation du contenu est autorisée uniquement à des fins personnelles et non commerciales. La copie ou la distribution non autorisée des documents est interdite.
+                </p>
+              </li>
+              <li class="item">
+                <p class="text">
+                    3. Le site web se réserve le droit de modifier les présentes conditions générales à tout moment. En continuant à utiliser le site web après que des modifications ont été apportées, vous acceptez les conditions générales mises à jour.
+                </p>
+              </li>
+            </ul> 
           </div>
-          <p class="text">
-            La démo Plinko est sans aucun doute une excellente occasion d'essayer le jeu et de se familiariser avec ses paramètres et ses mécanismes. Cependant, les joueurs expérimentés l'utilisent à des fins légèrement différentes.
-          </p>
-          <p class="text"> 
-            Par exemple, les joueurs utilisent souvent le mode gratuit de Plinko pour tester une stratégie spécifique sans prendre de risques.
-De plus, les paramètres du mode démo de la machine à sous sont les mêmes que ceux utilisés pour jouer avec de l'argent réel. Ainsi, après quelques dizaines de tours, il est facile de comprendre le fonctionnement de la machine sans dépenser un seul centime. Essayez dès maintenant la démo de Plinko et évaluez toutes les fonctionnalités du jeu
-sans aucun risque.
-          </p>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+
     <footer class="footer">
         <div class="container">
           <div>
@@ -139,35 +130,6 @@ sans aucun risque.
         </div>
       </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const openBtn = document.getElementById("open-demo");
-        const modal = document.getElementById("demoModal");
-        const closeBtn = modal.querySelector(".close");
 
-        const iframeSrc =
-          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
-        const iframe = modal.querySelector("iframe");
-
-        openBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          iframe.src = iframeSrc;
-          modal.style.display = "flex";
-        });
-
-        function closeModal() {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      });
-    </script> 
   </body>
 </html>

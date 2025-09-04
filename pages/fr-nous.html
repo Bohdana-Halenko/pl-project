@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu en ligne Plinko</title>
+    <title>À propos de nous</title>
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,40 +56,53 @@
         </nav>
       </div>
     </header>
+    
     <main>
-      <section class="demo">
-        <div class="container">
-          <h1 class="title">Essayez la version démo de Plinko</h1>
-          <div class="demo-box">
-            <a href="#" class="demo-link" id="open-demo">Jouer</a>
-            <div class="modal" id="demoModal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe
-                  src="https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
-            </div>
-            <a
-              href="https://1wfzws.life/?p=ayxs&sub1=1"
-              class="demo-app-link"
-              target="_blank"
-              >Jouer au casino</a
-            >
+        <section class="res">
+          <div class="container">
+            <h1 class="title">À propos de nous</h1>
+            <p class="text">Notre équipe est passionnée par l'univers des casinos en ligne. Nous sommes spécialisés dans la fourniture d'informations fiables et actualisées sur le jeu populaire Plinko.</p>
+            <p class="text">Notre objectif est de vous aider à comprendre comment fonctionne le jeu, comment jouer gratuitement ou avec de l'argent réel, et comment améliorer vos chances, car Plinko est un jeu d'argent réel. Nous ne vendons pas de paris et ne fonctionnons pas comme un casino. Nous sommes un site web 100 % informatif, créé par des joueurs expérimentés pour les débutants.</p>
+            <h2 class="subtitle">Que trouverez-vous sur notre site?</h2>
+            <ul class="list">
+              <li class="item">
+                <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+                <p class="res-text">Guides détaillés sur  
+                  <a href="./fr-index.html" class="res-link">Comment jouer à Plinko</a>
+                .</p>
+              </li>
+              <li class="item">
+                <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+                <p class="res-text">
+                    Avis honnêtes sur les démos et les applications mobiles, commentaires honnêtes d'autres joueurs
+                </p>
+              </li>
+              <li class="item">
+                <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+                <p class="res-text">
+                    Informations importantes concernant la sécurité, la confidentialité et le jeu responsable.
+                </p>
+              </li>
+              <li class="item">
+                <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+                <p class="res-text">Informations sur le jeu sur différents appareils.</p>
+              </li>
+              <li class="item">
+                <img src="../img/arrow.webp" alt="arrow" class="sitemap-icon" />
+                <p class="res-text">
+                    Explications simples du jeu pour les débutants.
+                </p>
+              </li>
+            </ul>
+            <h2 class="subtitle">Notre mission</h2>
+            <p class="text">Nous voulons que tous les joueurs puissent profiter d'une expérience de jeu sûre et sans risque. Après tout, nous pensons que de bonnes informations améliorent le jeu. Que vous soyez débutant ou joueur expérimenté, vous trouverez sur notre site des informations utiles et faciles à comprendre.</p>
+            <h2 class="subtitle">Transparence et responsabilité</h2>
+            <p class="text">Tout le contenu que vous lisez sur notre site web a été préparé à partir de recherches approfondies sur les fournisseurs de jeux, les avis, le gameplay et les statistiques. Nous ne faisons pas la promotion des jeux d'argent illégaux et ne publions pas de liens vers des plateformes non agréées. Nous respectons votre vie privée et votre sécurité.</p>
+            <p class="text">Merci de votre visite et bon voyage dans le monde. <a href="https://1wfzws.life/?p=ayxs&sub1=1" class="res-link">Plinko 1Win</a>!</p>
           </div>
-          <p class="text">
-            La démo Plinko est sans aucun doute une excellente occasion d'essayer le jeu et de se familiariser avec ses paramètres et ses mécanismes. Cependant, les joueurs expérimentés l'utilisent à des fins légèrement différentes.
-          </p>
-          <p class="text"> 
-            Par exemple, les joueurs utilisent souvent le mode gratuit de Plinko pour tester une stratégie spécifique sans prendre de risques.
-De plus, les paramètres du mode démo de la machine à sous sont les mêmes que ceux utilisés pour jouer avec de l'argent réel. Ainsi, après quelques dizaines de tours, il est facile de comprendre le fonctionnement de la machine sans dépenser un seul centime. Essayez dès maintenant la démo de Plinko et évaluez toutes les fonctionnalités du jeu
-sans aucun risque.
-          </p>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+
     <footer class="footer">
         <div class="container">
           <div>
@@ -139,35 +152,6 @@ sans aucun risque.
         </div>
       </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const openBtn = document.getElementById("open-demo");
-        const modal = document.getElementById("demoModal");
-        const closeBtn = modal.querySelector(".close");
 
-        const iframeSrc =
-          "https://demo.bgaming-network.com/games/Plinko/FUN?play_token=6d2447d4-5ed7-40f8-973d-5e8ab6890cc4";
-        const iframe = modal.querySelector("iframe");
-
-        openBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          iframe.src = iframeSrc;
-          modal.style.display = "flex";
-        });
-
-        function closeModal() {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      });
-    </script> 
   </body>
 </html>

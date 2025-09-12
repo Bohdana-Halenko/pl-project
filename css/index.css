@@ -297,11 +297,15 @@
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .popular-icon {
   display: inline-block;
   animation: swing 2s infinite ease-in-out;
   transform-origin: bottom center;
+}
+.popular-list{
+  margin-bottom: 20px;
 }
 @keyframes swing {
   0% {
